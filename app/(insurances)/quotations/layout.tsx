@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function PoliciesLayout({ children }: Props) {
+export default function QuotationsLayout({ children }: Props) {
   const { setOpen } = useSidebar();
 
   useEffect(() => {
