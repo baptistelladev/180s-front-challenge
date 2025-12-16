@@ -7,7 +7,7 @@ type Props = {
 
 export default function MainLayout({ children }: Props) {
   return (
-    <SidebarProvider defaultOpen={true}>
+    <SidebarProvider defaultOpen={false}>
       {/* SIDEBAR */}
       <CustomSidebarComp side="left" variant="inset" />
 
