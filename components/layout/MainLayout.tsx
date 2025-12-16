@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function MainLayout({ children }: Props) {
+export default function MainLayoutComp({ children }: Props) {
   return (
     <SidebarProvider defaultOpen={false}>
       {/* SIDEBAR */}
