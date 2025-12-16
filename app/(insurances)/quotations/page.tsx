@@ -4,7 +4,7 @@ export default function PoliciesPage() {
   return (
     <div className="policies">
       <PageHeaderComp
-        icon="add"
+        icon="plus"
         title="Nova cotação"
         subTitle="Gerencie suas apólices de seguro emitidas"
       />
