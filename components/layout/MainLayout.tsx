@@ -1,3 +1,5 @@
+"use client";
+
 import { SidebarInset, SidebarProvider } from "../ui/sidebar";
 import { CustomSidebarComp } from "./CustomSidebar";
 

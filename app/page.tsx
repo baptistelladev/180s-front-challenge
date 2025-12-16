@@ -1,9 +1,20 @@
-import { Button } from "@/components/ui/button";
-import logo from "@/public/180seguros.png";
-import { Code, GitBranch, Github } from "lucide-react";
-import Image from "next/image";
+"use client";
 
-export default function Inicio() {
+import { Button } from "@/components/ui/button";
+import { useSidebar } from "@/components/ui/sidebar";
+import logo from "@/public/180seguros.png";
+import { Code, GitBranch } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
+
+export default function Home() {
+  const { setOpen } = useSidebar();
+
+  useEffect(() => {
+    setOpen(false);
+  }, []);
+
   return (
     <div className="w-full h-[calc(100vh-16px)] flex items-center justify-center flex-col gap-6 px-6">
       <Image src={logo} alt="logo" title="logo" width={100} />
@@ -21,12 +32,17 @@ export default function Inicio() {
           , candidato a vaga de Desenvolvedor Front-end na 180s Seguros.
         </p>
 
-        <div className="w-full flex justify-center items-center gap-3">
+        <div className="w-full flex justify-center items-center gap-3 p-0">
           <Button
             variant={"default"}
-            className="text-xs font-normal bg-foreground"
+            className="text-xs font-normal p-0 bg-foreground"
           >
-            <Code /> Ver projeto
+            <Link
+              href={"/policies"}
+              className="flex items-center gap-2 h-full w-full p-3"
+            >
+              <Code /> Ver projeto
+            </Link>
           </Button>
           <Button variant={"outline"} className="text-xs font-normal p-0">
             <a
