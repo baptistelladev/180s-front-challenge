@@ -7,6 +7,9 @@ interface newQuotationStore {
   clearQuotationSelectedProduct: () => void;
 }
 
+/**
+ * @description Store para ser usada quando quiser navegar informação do produto selecionado na cotação.
+ */
 export const useNewQuotationStore = create<newQuotationStore>((set) => ({
   quotationSelectedProduct: null,
   setQuotationSelectedProduct: (type) =>

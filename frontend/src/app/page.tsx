@@ -2,9 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import logo from "@/public/180seguros.png";
-import { Code, GitBranch } from "lucide-react";
+import { FileImage, GitBranch } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,12 +28,12 @@ export default function Home() {
             variant={"default"}
             className="text-xs font-normal p-0 bg-foreground"
           >
-            <Link
-              href={"/policies"}
+            <a
+              href="https://www.figma.com/make/R01ErFVQWYlsGyRye3SKvL/Sistema-de-Cota%C3%A7%C3%A3o-de-Seguros-180"
               className="flex items-center gap-2 h-full w-full p-3"
             >
-              <Code /> Ver projeto
-            </Link>
+              <FileImage /> Ver protótipo
+            </a>
           </Button>
           <Button variant={"outline"} className="text-xs font-normal p-0">
             <a

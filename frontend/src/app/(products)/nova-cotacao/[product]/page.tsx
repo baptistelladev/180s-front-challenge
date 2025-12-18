@@ -8,7 +8,8 @@ import Link from "next/link";
 
 export default function CotarProdutoPage() {
   /* HOOKs */
-  const { quotationSelectedProduct } = useNewQuotationStore();
+  const { quotationSelectedProduct, clearQuotationSelectedProduct } =
+    useNewQuotationStore();
 
   return (
     <div className="nova-cotacao-page-wrapper">
@@ -22,6 +23,7 @@ export default function CotarProdutoPage() {
 
       <div className="container mx-auto px-6 py-6 max-w-4xl">
         <Button
+          onClick={() => clearQuotationSelectedProduct()}
           size={"sm"}
           variant={"ghost"}
           className="text-[12.25px] font-medium hover:bg-primary/10 p-0"
@@ -37,6 +39,12 @@ export default function CotarProdutoPage() {
           </h1>
           <p className="text-muted-foreground font-normal text-sm">
             Preencha as informações para calcular sua cotação
+          </p>
+        </div>
+
+        <div className="pt-6">
+          <p className="text-sm">
+            ...formulário de <b>{quotationSelectedProduct?.name}</b> viria aqui.
           </p>
         </div>
       </div>

@@ -63,3 +63,7 @@ export interface InsurancePolicy {
 export interface ProductsResponse {
   products: Product[];
 }
+
+export interface InsurancesResponse {
+  insurances: InsurancePolicy[];
+}

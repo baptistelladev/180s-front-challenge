@@ -17,11 +17,18 @@ import { Plus, Shield } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+type Menu = {
+  value: string;
+  text: string;
+  icon: string;
+  route: string;
+};
+
 export function CustomSidebarComp({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
   // MENU
-  const menu: any[] = [
+  const menu: Menu[] = [
     {
       value: "nova-cotacao",
       text: "Nova cotação",
@@ -32,7 +39,7 @@ export function CustomSidebarComp({
       value: "minhas-apolices",
       text: "Minhas apólices",
       icon: "file-text",
-      route: "/policies",
+      route: "/minhas-apolices",
     },
   ];
 

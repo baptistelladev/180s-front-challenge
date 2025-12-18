@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
+
 import { INSURANCE_ICONS, InsuranceIconKey } from "@/shared/maps/ICONS.maps";
 import { useNewQuotationStore } from "@/src/stores/products/new-quotation";
 import { Product, ProductType } from "@/shared/models/responses";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   product: Product;

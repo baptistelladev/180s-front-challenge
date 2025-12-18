@@ -25,9 +25,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} `}>
         <MainLayoutComp>{children}</MainLayoutComp>
       </body>
     </html>
