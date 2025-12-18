@@ -1,20 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useSidebar } from "@/components/ui/sidebar";
 import logo from "@/public/180seguros.png";
 import { Code, GitBranch } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Home() {
-  const { setOpen } = useSidebar();
-
-  useEffect(() => {
-    setOpen(false);
-  }, []);
-
   return (
     <div className="w-full h-[calc(100vh-16px)] flex items-center justify-center flex-col gap-6 px-6">
       <Image src={logo} alt="logo" title="logo" width={100} />

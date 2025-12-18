@@ -12,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { ICONS } from "@/shared/maps/ICONS.maps";
 import { Plus, Shield } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,7 +26,7 @@ export function CustomSidebarComp({
       value: "nova-cotacao",
       text: "Nova cotação",
       icon: "plus",
-      route: "/quotations",
+      route: "/nova-cotacao",
     },
     {
       value: "minhas-apolices",
@@ -64,23 +65,24 @@ export function CustomSidebarComp({
           <SidebarGroupContent>
             {/* ITEMS */}
             <SidebarMenu>
-              {menu.map((option) => (
-                <SidebarMenuItem key={option.value}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === option.route}
-                    className={`${pathname === option.route && "font-bold"} `}
-                  >
-                    <Link href={option.route}>
-                      <Plus></Plus>
-                      <span>
-                        {option.text}
-                        {pathname === option.route}
-                      </span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {menu.map((option) => {
+                const Icon = ICONS[option.icon];
+
+                return (
+                  <SidebarMenuItem key={option.value}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={pathname === option.route}
+                      className={`${pathname === option.route && "font-bold"} `}
+                    >
+                      <Link href={option.route}>
+                        <Icon />
+                        <span>{option.text}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

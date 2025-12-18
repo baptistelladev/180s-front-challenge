@@ -1,3 +1,5 @@
+"use client";
+
 import PageHeaderComp from "@/components/layout/PageHeader";
 
 export default function PoliciesPage() {
